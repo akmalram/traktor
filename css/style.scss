@@ -9,11 +9,6 @@
 }
 
 
-body {
-    transition: opacity 1.5s ease;
-    opacity: 0;
-}
-
 .navbar {
     width: 100%;
     box-sizing: border-box;
@@ -154,6 +149,7 @@ body {
 
     &-contacts {
         text-align: center;
+
         .phone-call {
             a {
                 font-size: 19px;
@@ -380,6 +376,7 @@ body {
         flex-wrap: wrap;
         margin: 20px 0;
     }
+
     .left,
     .right {
         width: 48%;
@@ -462,6 +459,7 @@ body {
 
     .btns {
         margin-top: 10px;
+
         @include sm-block {
             justify-content: center;
         }
@@ -668,8 +666,86 @@ body {
         font-size: 40px;
         font-weight: 500;
     }
+
     .modal-content .paragraph {
         max-height: 70vh;
         overflow-y: scroll;
+    }
+}
+
+
+@keyframes ldio-kdi3h5kl6e {
+
+    0%,
+    100% {
+        animation-timing-function: cubic-bezier(0.45, 0, 0.9, 0.55)
+    }
+
+    0% {
+        transform: translate(0, 0)
+    }
+
+    50% {
+        transform: translate(0, 130.02px);
+        animation-timing-function: cubic-bezier(0, 0.45, 0.55, 0.9);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.ldio-kdi3h5kl6e div {
+    position: absolute;
+    width: 27.58px;
+    height: 27.58px;
+    border-radius: 50%;
+    background: #1d0e0b;
+    left: 84.71px;
+    top: 19.7px;
+    animation: ldio-kdi3h5kl6e 1.04s linear infinite;
+}
+
+.loadingio-spinner-ball-iitv4o3abac {
+    width: 197px;
+    height: 197px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.ldio-kdi3h5kl6e {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+    /* see note above */
+}
+
+.ldio-kdi3h5kl6e div {
+    box-sizing: content-box;
+}
+
+.preloader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 111111;
+    transition: all .5s ease;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
     }
 }

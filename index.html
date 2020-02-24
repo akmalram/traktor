@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Погрузчик АМКОДОР 134 - предназначен для выполнения земляных работ на грунтах 1-2 категории и поргузочно-разгрузочных работ, пранировки строительных площадоки грунтовых дорог, засыпки траншей и ям, подъёма и перемщения штучных грузов и других хозяйственных нужд. Дополнительно имеются: бульдозерный отвал, вилы грузовые, захват релонов и стогов сена, плуги, пресс-подборщики, тележки самосвального типа, сеялки." >
-    <title>Document</title>
+    <title>Амкодор</title>
     <link rel="icon" href="./favicon.png" type="image/x-icon">
 
     <!-- Plugins -->
@@ -21,6 +21,13 @@
 
 </head>
 <body>
+    <div class="preloader active">
+        <div class="loadingio-spinner-ball-iitv4o3abac">
+            <div class="ldio-kdi3h5kl6e">
+                <div></div>
+            </div>
+        </div>
+    </div>
     <nav class="navbar">
         <div class="navbar-container">
             <div class="navbar-inner">
@@ -704,8 +711,8 @@
 
     <script src="./js/script.js"></script>
     <script>
-        window.addEventListener('load', () => {
-            document.querySelector('body').style.cssText = 'opacity: 1';
+        window.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.preloader').classList.remove('active');
         });
     </script>
 </body>
