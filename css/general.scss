@@ -7,8 +7,8 @@
 @font-face {
     font-family: "Gilroy";
     src: url(../fonts/Gilroy-Bold.eot) format("eot"),
-         url(../fonts/Gilroy-Bold.ttf) format("truetype"),
-         url(../fonts/Gilroy-Bold.woff) format("woff");
+        url(../fonts/Gilroy-Bold.ttf) format("truetype"),
+        url(../fonts/Gilroy-Bold.woff) format("woff");
     font-weight: bold;
     font-style: normal;
 }
@@ -16,8 +16,8 @@
 @font-face {
     font-family: "Gilroy";
     src: url(../fonts/Gilroy-Thin.eot) format("eot"),
-         url(../fonts/Gilroy-Thin.ttf) format("truetype"),
-         url(../fonts/Gilroy-Thin.woff) format("woff");
+        url(../fonts/Gilroy-Thin.ttf) format("truetype"),
+        url(../fonts/Gilroy-Thin.woff) format("woff");
     font-weight: thin;
     font-style: normal;
 }
@@ -25,8 +25,8 @@
 @font-face {
     font-family: "Gilroy";
     src: url(../fonts/Gilroy-Regular.eot) format("eot"),
-         url(../fonts/Gilroy-Regular.ttf) format("truetype"),
-         url(../fonts/Gilroy-Regular.woff) format("woff");
+        url(../fonts/Gilroy-Regular.ttf) format("truetype"),
+        url(../fonts/Gilroy-Regular.woff) format("woff");
     font-weight: 400;
     font-style: normal;
 }
@@ -212,12 +212,13 @@ button {
 .paragraph {
     font-size: 20px;
     text-align: justify;
-    font-weight:  bold;
+    font-weight: bold;
 
     @include xs-block {
         font-size: 15px;
     }
 }
+
 ::selection {
     background: #000;
     color: #fff;
@@ -241,7 +242,8 @@ button {
     border: 2px solid $primary-color;
     border-radius: 5px;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         outline: none;
         color: #fff;
         background-color: #333;

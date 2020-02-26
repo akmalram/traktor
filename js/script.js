@@ -45,21 +45,6 @@ const changeBox8 = (src) => {
 }
 
 ready(() => {
-    const MenuClassToggler = () => {
-        const btn = document.querySelector('.navbar-toggler .btn');
-        const menu = document.querySelector('.navbar-menu');
-
-        btn.addEventListener('click', () => {
-            btn.classList.toggle('active');
-            menu.classList.toggle('active');
-            document.querySelector('body').classList.toggle('overhidden');
-        });
-    }
-
-    MenuClassToggler();
-});
-
-ready(() => {
     const modalToggler = (buttonClass, modalClass) => {
         let btn = document.querySelectorAll(buttonClass),
             modal = document.querySelector(modalClass),
@@ -118,10 +103,30 @@ ready(() => {
 });
 
 ready(() => {
+    const MenuClassToggler = () => {
+        const btn = document.querySelector('.navbar-toggler .btn');
+        const menu = document.querySelector('.navbar-menu');
+
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('active');
+            menu.classList.toggle('active');
+            document.querySelector('body').classList.toggle('overhidden');
+        });
+    }
+
+    MenuClassToggler();
+
+    const closeMenu = () => {
+        const menu = document.querySelector('.navbar-menu');
+        menu.classList.remove('active');
+        document.querySelector('body').classList.remove('overhidden');
+    }
+
     let scrollToAnchor = () => {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
+                closeMenu();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
@@ -164,4 +169,15 @@ ready(() => {
     fixOnScroll('#trtr-6', '#trtr-6 .trtr-gallery');
     fixOnScroll('#trtr-7', '#trtr-7 .trtr-gallery');
     fixOnScroll('#trtr-8', '#trtr-8 .trtr-gallery');
+});
+
+ready(() => {
+    $(document).bind('mousewheel', function (e) {
+        var nt = $(document.body).scrollTop() - (e.deltaY * e.deltaFactor * 100);
+        e.preventDefault();
+        e.stopPropagation();
+        $(document.body).stop().animate({
+            scrollTop: nt
+        }, 500, 'easeInOutCubic');
+    });
 });
